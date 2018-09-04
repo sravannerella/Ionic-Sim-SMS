@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { Sim } from '@ionic-native/sim';
 
 @Component({
   selector: 'page-home',
@@ -7,8 +8,16 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
-
+  phoneNumber: String;
+  
+  constructor(public navCtrl: NavController, private sim: Sim) {
+      this.phoneNumber = "313244";
+      this.sim.getSimInfo().then( (info) => {
+        this.phoneNumber = info;
+      }, (err) => {
+        this.phoneNumber = "FAILED";
+        console.log(this.phoneNumber);
+      });
   }
 
 }

@@ -1,3 +1,9 @@
 page-home {
+    .mw-250{
+        max-width: 250px;
+    }
 
+    .text-primary{
+        color: map-get($colors, 'primary');
+    }
 }
