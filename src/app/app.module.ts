@@ -7,6 +7,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { Sim } from '@ionic-native/sim';
+import { SMS } from '@ionic-native/sms';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { Sim } from '@ionic-native/sim';
     StatusBar,
     SplashScreen,
     Sim,
+    SMS,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
