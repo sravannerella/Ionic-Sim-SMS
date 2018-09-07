@@ -6,6 +6,8 @@
 			<p class="text-bold mw-250">Click on <span class="text-primary">Log in</span> to send a <span class="text-primary">OTP</span> to your <span class="text-primary">phone</span></p>
 			<br> {{myPhoneNumber}}
 			<button ion-button color="light" (click)="sendSMS()">LogMe With OTP</button>
+
+			<p class="text-bold" *ngIf="otpAvailable">Your OTP is:<br><br><br><span class="text-primary mr-2" *ngFor="let number of otp">{{number}}</span></p>
 		</div>
 	</div>
 </ion-content>
