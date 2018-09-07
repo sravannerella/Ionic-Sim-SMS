@@ -6,4 +6,8 @@ page-home {
     .text-primary{
         color: map-get($colors, 'primary');
     }
+
+    .mr-2{
+        margin-right: 2rem;
+    }
 }
